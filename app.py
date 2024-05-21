@@ -28,9 +28,6 @@ religions_and_creeds = {
     # Add more religions and creeds as needed
 }
 
-# Initialize the Translator object
-translator = Translator(to_lang="en")
-
 def main():
     """
     This function is the main entry point of the application. It sets up the Groq client, the Streamlit interface, and handles the chat interaction.
@@ -89,7 +86,8 @@ def main():
         
         # Translate user question to English
         if detected_language != 'en':
-            user_question_english = translator.translate(user_question)
+            translator_to_en = Translator(to_lang="en")
+            user_question_english = translator_to_en.translate(user_question)
         else:
             user_question_english = user_question
 
@@ -123,7 +121,8 @@ def main():
         
         # Translate the response back to the user's language if necessary
         if detected_language != 'en':
-            response = translator.translate(response_english, from_lang="en", to_lang=detected_language)
+            translator_from_en = Translator(to_lang=detected_language)
+            response = translator_from_en.translate(response_english)
         else:
             response = response_english
 
