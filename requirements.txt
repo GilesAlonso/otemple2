@@ -57,12 +57,12 @@ jupyter_client==7.4.3
 jupyter_core==4.11.2
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.3
-langchain==0.2.0  # updated version
-langchain-community==0.0.36
-langchain-core==0.2.0  # updated version
-langchain-groq==0.1.0  # updated version
+langchain==0.1.5
+langchain-community==0.0.19
+langchain-core==0.1.21
+langchain-groq==0.0.1
 langdetect==1.0.9
-langsmith==0.1.17
+langsmith==0.0.87
 markdown-it-py==3.0.0
 MarkupSafe==2.1.1
 marshmallow==3.20.2
