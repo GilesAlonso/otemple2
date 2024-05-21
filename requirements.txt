@@ -61,6 +61,7 @@ langchain==0.1.5
 langchain-community==0.0.19
 langchain-core==0.1.21
 langchain-groq==0.0.1
+langdetect==1.0.9
 langsmith==0.0.87
 markdown-it-py==3.0.0
 MarkupSafe==2.1.1
