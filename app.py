@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from groq import Groq
-from translate import Translator
+from googletrans import Translator
 from langdetect import detect
 
 from langchain.chains import ConversationChain, LLMChain
