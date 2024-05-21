@@ -58,7 +58,7 @@ jupyter_core==4.11.2
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.3
 langchain==0.1.17  # updated version
-langchain-community==0.0.30
+langchain-community==0.0.36
 langchain-core==0.1.37  # updated version
 langchain-groq==0.1.0  # updated version
 langdetect==1.0.9
