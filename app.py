@@ -28,7 +28,7 @@ religions_and_creeds = {
     # Add more religions and creeds as needed
 }
 
-translator = Translator()
+translator = Translator
 
 def main():
     """
