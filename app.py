@@ -88,7 +88,7 @@ def main():
         
         # Translate user question to English
         if detected_language != 'en':
-            user_question_english = translator.translate(user_question, src=detected_language, dest='en').text
+            user_question_english = Translator.translate(user_question, src=detected_language, dest='en').text
         else:
             user_question_english = user_question
 
@@ -122,7 +122,7 @@ def main():
         
         # Translate the response back to the user's language if necessary
         if detected_language != 'en':
-            response = translator.translate(response_english, src='en', dest=detected_language).text
+            response = Translator.translate(response_english, src='en', dest=detected_language).text
         else:
             response = response_english
 
