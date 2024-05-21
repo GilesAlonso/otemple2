@@ -142,7 +142,6 @@ tornado==6.2
 tqdm==4.66.1
 traitlets==5.5.0
 transformers==4.37.2
-googletrans==4.0.0-rc1
 translate==3.6.1  # added
 typing-inspect==0.9.0
 typing_extensions==4.9.0
