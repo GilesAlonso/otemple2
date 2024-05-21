@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from groq import Groq
-from googletrans import Translator
+from translate import Translator
 from langdetect import detect
 
 from langchain.chains import ConversationChain, LLMChain
@@ -29,7 +29,7 @@ religions_and_creeds = {
 }
 
 # Initialize the Translator object
-translator = Translator()
+translator = Translator(to_lang="en")
 
 def main():
     """
@@ -89,7 +89,7 @@ def main():
         
         # Translate user question to English
         if detected_language != 'en':
-            user_question_english = translator.translate(user_question, src=detected_language, dest='en').text
+            user_question_english = translator.translate(user_question)
         else:
             user_question_english = user_question
 
@@ -123,7 +123,7 @@ def main():
         
         # Translate the response back to the user's language if necessary
         if detected_language != 'en':
-            response = translator.translate(response_english, src='en', dest=detected_language).text
+            response = translator.translate(response_english, from_lang="en", to_lang=detected_language)
         else:
             response = response_english
 
